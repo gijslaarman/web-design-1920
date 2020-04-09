@@ -1,91 +1,39 @@
 # Web design
-## Opdracht 1 - Ontwerpen met en voor echte mensen.
+For this course I will be designing a podcast experience for Deaf people. Podcasts are very audio intensive, and less focused on the visual aspect. Deaf people can't hear so they need the visual aspect a lot more to be able to comprehend of what's going on.
 
+## Overview
+| Planning | Goal | Results / Conclusion |
+|---|---|---|
+| Week 1 | What are the best practices, any examples of good practices in action? Getting to know a little more about Marie. | [Coming soon](#) 
 
-Voor dit vak krijg je een ontwerp-opdracht die je gaat maken voor 1 mens. Een echt mens. Je moet je ontwerp 3 keer testen. Door te testen en te itereren ga je je ontwerp verbeteren. Uiteindelijk heb je een ontwerp dat exclusief gemaakt is voor 1 persoon. Een _exclusive design_ ... Wie is deze persoon dan voor wie je dit gaat maken? Wat vindt deze persoon leuk of juist niet? En hoe bedient deze persoon een computer?
-
-
-
-### Doel van deze opdracht
-Het doel van deze opdracht is om je te verdiepen in een gebruiker, en om te leren testen. Test of jouw gebruiker, jouw 'mens' je demo goed kan bedienen. Kloppen je aannames? Door te prototypen en testen met echte mensen leer je hoe je je ontwerp kan verbeteren.
-
-
-### Uitleg
-Je wordt ingedeeld in een groep die gaat ontwerpen voor 1 persoon. Niet een doelgroep, maar een persoon.
-
-Voor het maken van deze opdracht maak je gebruik van de [_Exclusive Design Principles_](https://exclusive-design.vasilis.nl):
-
-- Study Situation
-- Ignore Conventions
-- Prioritise Identity
-- Add Nonsense
-
-
-#### Marie van Driessche
-
-Marie is Doof (met een hoofdletter inderdaad, dat betekent dat ze zichzelf als Doof identificeert, wat simpelgezegd betekent dat haar eerste taal Nederlandse Gebarentaal is). Je zult begrijpen dat Marie moeite heeft met dingen waar geluid een grote rol speelt.
-
+## Week 1
 <details>
-<summary>Hoe werkt een podcast voor Marie?</summary>
-<p>In een transcriptie gaat natuurlijk nogal wat nuance verloren. Maak een oplossing die minimaal net zo prettig is voor iemand die niet kan luisteren als voor iemand die wel kan luisteren.
+  <summary>Getting to known Marie, and getting to understand the Deaf community better.</summary>
+  
+  ### Chatting with Marie
+  So first we met with Marie through bongo, a web app for facetiming and presenting your screen. Everyone asked some questsions to get to understand the situation a little better.
+  
+  I barely needed to get used to the fact that there is a translator speaking. They did such a good job that it really looked like you were talking to Marie herself, a very cool experience (never did that before)!
+  
+  Some highlighters I picked up out of this conversation:
+  - Marie's native tongue is dutch sign language, she is fluent in Dutch & English (as far as I could understand). She had no trouble reading texts. 
+  - Sign language is a whole other language than textual. It would be the same as comparing Chinese with Dutch. Without being able to speak it you have to resort back to basic gestures that are universal. 
+  - Marie uses an app called 'Tolk contact' when she needs to make a call. Being called is super annoying for her since she can't do anything with it. When she makes a call she uses the Tolk contact app who will be her voice and translates what is being said back to Marie in sign language with video.
+  - Marie is just like us, only 'listens' to podcasts she is truly interested in. But they must truly capture her attention to read the transcript does she want to read it. 
+  - She reads emotion out of people's facial expressions, they are very important.
+  - Marie watches movies & series just like us, the only difference being she can't hear them ofcourse.
+  - In movies she sometimes has a hard time distinguishing the different characters from each other, since the subtitles don't show who is talking.
+  - If the subtitles are out of sync with the video it's super hard to understand what's going on.
+  - Comic books are a good example in how you can express emotion/sounds better in a visual way. 
+ 
 </details>
 
-<details>
-<summary>Hoe werken closed captions voor Marie?</summary>
-<p>Voor Marie gaat er enorm veel nuance verloren tijdens het kijken naar een film of een documentaire. Bij veel films worden closed captions aangeboden, maar die zijn zo neutraal als maar kan. Hoe zou je closed captions
-</details>
+### Best practices designing for Deaf people.
+1. Keep the language clear and simple. Deaf people aren't native Dutch/English speakers. Writing simpler and clear language makes it easier to read. And let's be honest it makes it easier for everyone.
+2. The use of close captioning is useful, but there are somethings that are only useful for the non hear impaired. Think of adding [whispering] or [LOUD] to the caption, it doesn't make much sense to someone who has never experienced such things before. Ofcourse this is still relevant to people who are using close captioning that are not Deaf or hear impaired.
 
-#### Larissa Klaassen
+### My challenge
+So I'm going to choose one podcast and try to transform it more into a visual experience.
 
-Larissa is blind. Ze maakt gebruik van een brailleregel, en van een screenreader. Je snapt dat heel veel van de gangbare design patterns niet optimaal werken voor haar omdat ze 100% vanuit een visueel oogpunt ontworpen zijn. Larissa is student aan de HvA. En daarnaast is ze topsporter. Ze is laatst tweede geworden op het WK baanwielrennen.
-
-<details>
-<summary>Topsport-rooster begrijpen</summary>
-<p>Alle topwielrenners krijgen om de zoveel tijd een Excel sheet toegestuurd waarin alle trainingsschema’s staan. Dit is een uitgebreid, complex ding. En hij is *colour coded*. Je moet dus kunnen zien om hem te kunnen gebruiken. Dat kunnen jullie beter. Dus. Ontwerp een oplossing waardoor Larissa op een prettige en manier de relevante data kan gebruiken.
-</details>
-
-<details>
-<summary>Onzichtbare datavisualisatie</summary>
-<p>Sommigen van jullie hebben hiervoor gewerkt aan datavisualisaties. Prachtige produkten zijn daar uitgekomen. Maar hoe zouden die interactieve datavisualisaties werken en er uitzien als de doelgroep alleen bestond uit Larissa Klaassen?
-</details>
-
-#### Marijn Meijles
-
-Marijn heeft een motorische stoornis. Hij gebruikt zijn computer dus anders dan wij. Hij heeft veel moeite met fijne motoriek. Hij gebruikt zijn toetsenbord om te navigeren, en in de Accessibility settings van zijn Mac heeft hij Sticky Keys aan staan.
-
-<details>
-<summary>Ontwerp een date picker voor Marijn</summary>
-<p>Hij reist veel met de trein, en hij moet van tevoren aangeven welke trein hij wil nemen zodat er iemand is om hem te helpen met zijn rolstoel. Date-pickers zijn over het algemeen priegelig, en niet ontworpen voor iemand die afhankelijk is van zijn toetsenbord?
-</details>
-
-<details>
-<summary>Ontwerp een Drag & Drop lijst</summary>
-<p>Hoe kun je een drag & drop lijst optimaliseren voor een gebruiker die afhankelijk is van zijn toetsenbord én motorisch gestoord is?
-</details>
-
-#### Roger Ravelli
-
-Roger is sinds een jaar of tien langzaam blind aan het worden. Inmiddels is hij op het punt beland dat hij de overstap aan het maken is van *inzoom-software* naar *screenreaders*. Tot voor kort was hij een specialist op het gebied van duurzame energie. Maar omdat hij geen technische tekeningen, ingewikkelde tabellen, of grafieken meer kan lezen, houdt dat op.
-
-<details>
-<summary>Hoe werkt een grafiek als je hem niet kunt zien?</summary>
-<p>Een goede grafiek kan in één oogopslag een verhaal vertellen. Maar hoe vertel je dat verhaal als er geen oogopslag is?
-</details>
-
-<details>
-<summary>Hoe werkt een tabel met data als je hem niet kunt zien?</summary>
-<p>Voor Roger bevatten tabellen belangrijke informatie. Hij moet ze kunnen begrijpen. Een HTML-tabel is theoretisch toegankelijk te maken door de juiste attributen op te zetten. Maar hoe je een ingewikkelde tabel goed en liefst ook prettig bruikbaar maakt, dat is nog niet bekend.
-</details>
-
-<details>
-<summary>Onzichtbare datavisualisatie</summary>
-<p>Sommigen van jullie hebben hiervoor gewerkt aan datavisualisaties. Prachtige produkten zijn daar uitgekomen. Maar hoe zouden die interactieve datavisualisaties werken en er uitzien als de doelgroep alleen bestond uit Roger Ravelli?
-</details>
-
-
-
-### Criteria
-- Maak verschillende ontwerpen, versies en varianten van je opdracht. Experimenteer met verschillende vormen van interactie en vormgeving. Wat werkt goed? Wat werkt niet goed?
-- Test je ideeen en ontwerp 3 keer met jouw mens. Documenteer de test goed.
-- Verbeter je ontwerp op basis van de feedback die je hebt gekregen van de tests.
-- Zorg dat je voor de beoordeling in je Readme (of wiki) een conclusie schrijft waar je in gaat op de leerdoelen en criteria en hoe je dit hebt gehaald. Dit is je bewijsvoering voor het vak.
+Sources: 
+- https://www.hobo-web.co.uk/design-website-for-blind/#designing-websites-for-deaf-hard-of-hearing-visitors
