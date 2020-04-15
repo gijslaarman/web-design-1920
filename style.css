@@ -1,0 +1,78 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --shadow: 0 4px 14px #21212115;
+    font-family: 'apple-system', 'system-iu', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #003A6C;
+    position: relative;
+}
+
+body:before {
+    content: "";
+    background: radial-gradient(circle closest-side,#065882 10%, #003A6C 90%);
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+[hosts] {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.divider {
+    height: 100%;
+    width: 2px;
+    background-color: #103747;
+}
+.persons:first-of-type {
+    border-top-left-radius: 1em;
+}
+.persons:last-of-type {
+    border-top-right-radius: 1em;
+}
+.persons {
+    background-color: white;
+    height: 8em;
+    padding: 0.5em 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.person {
+    text-align: center;
+    margin-top: -2em;
+    width: 12em;
+}
+
+.person h3 {
+    margin-top: 0.25em;
+}
+
+.person img {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
