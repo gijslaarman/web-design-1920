@@ -1,0 +1,34 @@
+{
+    "title": "Hoe maak je deze crisis positief? Rutger Bregman legt uit.",
+    "meta": {
+        "date": "15:00:00 GMT+0100 (Central European Standard Time)"
+    },
+    "summary": [
+        "Ja hallo! En welkom bij De BOOS AntiCoronaDepressiePodcast, Hoe haalt een crisis juist het beste in de mens naar boven?", "Wat gaat er nu minder goed in de maatschappij en hoe kunnen we dat beter doen? Historicus, schrijver en journalist Rutger Bregman praat met Tim over de positieve kanten van de mens in crisistijd en hoe we hier als maatschappij beter uit kunnen komen."
+    ],
+    "hosts": [
+        {
+            "name": "Tim Hofman",
+            "subtitle": "Presentator",
+            "role": "host",
+            "img": "https://via.placeholder.com/300x400"
+        },
+        {
+            "name": "Rutger Bregman",
+            "subtitle": "Journalist bij de Correspondent & auteur",
+            "role": "guest",
+            "img": "https://via.placeholder.com/200x500"
+        }
+
+    ],
+    "transcript": [
+        {
+            "talking": "Tim Hofman",
+            "message": "Heeey hallotjes, leuk dat je weer kijkt naar een nieuwe aflevering van de ..."
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "De Boos Anti Corona Depressie Podcast! Dé podcast waar we jullie door deze corona crisis gaan helpen."
+        }
+    ]
+}
