@@ -31,7 +31,7 @@ p {
     padding: 0 0 1em 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.125em;
 }
 /* Universal Elements */
@@ -49,11 +49,15 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-h3 {}
+/* h3 {} */
 
 h4 {
     font-weight: 400;
     font-size: 1em;
+}
+
+h5 {
+    margin-bottom: 0.25em;
 }
 
 img {
@@ -73,6 +77,11 @@ button {
     display: inline-block;
 }
 
+button[HOOK_START] {
+    display: block;
+    margin: 2em auto 0;
+}
+
 section {
     padding: 1em;
 }
@@ -88,16 +97,15 @@ li {
 /* Custom elements */
 
 #start {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#start img {
-    max-width: 20em;
-    margin-bottom: 2em;
+.logo {
+    max-width: 12em;
+    margin: 2em 0;
 }
 
 #summary p:first-of-type {
@@ -132,4 +140,71 @@ li {
 
 .persons div {
     margin-left: 1em;
+}
+
+#transcript {
+    padding: 0;
+}
+
+#transcript.started {
+    padding: 1em;
+    padding-bottom: 6em;
+    min-height: 100%;
+}
+
+#transcript div {
+    margin: .15em 0 0;
+    animation: appear 100ms forwards;
+}
+
+#transcript div.marginTop {
+    margin-top: .5em;
+}
+
+#transcript .pause {
+    height: 2em;
+}
+
+#transcript .string {
+    background-color: white;
+    padding: 1em;
+}
+
+.string p {
+    padding-bottom: 0;
+}
+
+#transcript .string[alignment=host] {
+    margin-right: 1em;
+}
+#transcript .string[alignment=guest] {
+    margin-left: 1em;
+}
+
+/* CONTROLS */
+#controls {
+    position: fixed;
+    bottom: 0;
+    height: 5em;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    transition: transform 500ms;
+    box-shadow: 0 -4px 14px #21212120;
+}
+
+#controls.hidden {
+    transform: translateY(100%);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

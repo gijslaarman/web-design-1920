@@ -38,3 +38,5 @@ class StateManager {
         keys.forEach((key, i) => this.addNew(key, values[i]))
     }
 }
+
+export default StateManager

@@ -4,17 +4,19 @@
         "date": "15:00:00 GMT+0100 (Central European Standard Time)"
     },
     "summary": [
-        "Ja hallo! En welkom bij De BOOS AntiCoronaDepressiePodcast, Hoe haalt een crisis juist het beste in de mens naar boven?", "Wat gaat er nu minder goed in de maatschappij en hoe kunnen we dat beter doen? Historicus, schrijver en journalist Rutger Bregman praat met Tim over de positieve kanten van de mens in crisistijd en hoe we hier als maatschappij beter uit kunnen komen."
+        "Wat gaat er nu minder goed in de maatschappij en hoe kunnen we dat beter doen?", "Historicus, schrijver en journalist Rutger Bregman praat met Tim over de positieve kanten van de mens in crisistijd en hoe we hier als maatschappij beter uit kunnen komen."
     ],
     "hosts": [
         {
             "name": "Tim Hofman",
+            "color": "#103747",
             "subtitle": "Presentator",
             "role": "host",
             "img": "https://via.placeholder.com/300x400"
         },
         {
             "name": "Rutger Bregman",
+            "color": "#F76DB7",
             "subtitle": "Journalist bij de Correspondent & auteur",
             "role": "guest",
             "img": "https://via.placeholder.com/200x500"
@@ -24,11 +26,43 @@
     "transcript": [
         {
             "talking": "Tim Hofman",
-            "message": "Heeey hallotjes, leuk dat je weer kijkt naar een nieuwe aflevering van de ..."
+            "message": "Ja hallo, en welkom bij de Boos Anti Corona Depressie Podcast."
         },
         {
             "talking": "Tim Hofman",
-            "message": "De Boos Anti Corona Depressie Podcast! Dé podcast waar we jullie door deze corona crisis gaan helpen."
+            "message": "Waar we elke dinsdag en donderdag in deze vreemde tijden gedomineerd door het Corona virus, jou niet boos maar blij 😁 proberen te maken."
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "Door wat prettigs in jouw hoofd te stoppen. Voor een beetje hoop, en een beetje toekomst."
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "Je voelt je in ieder geval beter na de podcast dan vooraf."
+        },
+        {
+            "talking": null,
+            "pause": 2000
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "Vandaag gaan we het hebben over: Hoe een crisis juist het beste uit een mens kan halen."
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "En hoe wij hier als maatschappij beter uit de crisis kunnen komen."
+        },
+        {
+            "talking": "Tim Hofman",
+            "message": "En dat doen wij vandaag met behulp van Rutger Bregman!"
+        },
+        {
+            "talking": "Rutger Bregman",
+            "message": "Hi Tim leuk dat ik erbij mag zijn vandaag! Ben echt benieuwd!"
+        },
+        {
+            "talking": "Rutger Bregman",
+            "message": "Template"
         }
     ]
 }

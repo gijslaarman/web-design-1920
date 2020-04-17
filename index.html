@@ -6,29 +6,32 @@
     <title>Podcast</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="no-scroll">
+<body class="">
     <section id="start">
-        <img src="img/dbacp.png" alt="Podcast logo">
+        <img class="logo" src="img/dbacp.png" alt="Podcast logo">
         <h1><!-- Title will be loaded in by the JSON. --></h1>
-        <button HOOK_START>Start Podcast</button>
-    </section>
 
-    <section id="hosts">
-        <div id="summary"></div>
-        <ul id="host" class="persons">
-            <h2>Host</h2>
-            <!-- Hosts will be rendered in. -->
-        </ul>
+        <section id="hosts">
+            <div id="summary"></div>
+            <ul id="host" class="persons">
+                <h2>Host</h2>
+                <!-- Hosts will be rendered in. -->
+            </ul>
+    
+            <ul id="guest" class="persons">
+                <h2>Guests</h2>
+                <!-- Guests will be rendered in. -->
+            </ul>
 
-        <ul id="guest" class="persons">
-            <h2>Guests</h2>
-            <!-- Guests will be rendered in. -->
-        </ul>
+            <button HOOK_START link="transcript">Start Podcast</button>
+        </section>
     </section>
 
     <section id="transcript"></section>
 
-    <script src="StateManager.js"></script>
-    <script src="script.js"></script>
+    <section id="controls" class="hidden">
+    </section>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>
