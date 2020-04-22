@@ -1,11 +1,25 @@
 import StateManager from "./js/StateManager.js"
+const controlPanel = document.getElementById('controls')
+
+controlPanel.querySelector('[autoplay_control]').addEventListener('click', function () {
+	// Toggle play
+	const buttonState = this.getAttribute('state')
+
+	if (buttonState == 'play') {
+		this.setAttribute('state', 'paused')
+		State.autoplay = false
+	} else {
+		this.setAttribute('state', 'play')
+		State.autoplay = true
+	}
+})
 
 // State setup
 const State = new StateManager({
 	scrollLock: false,
 	autoplay: false,
-	started: false,
 	transcript: [],
+	started: false,
 	hosts: [],
 	wordSpeed: 150
 })
@@ -13,7 +27,7 @@ const State = new StateManager({
 function createPerson(person) {
 	return `
 	<li>
-		<img src="${person.img}" alt="Foto van ${person.name}"/>
+		<img style="border-color: ${person.color}" src="${person.img}" alt="Foto van ${person.name}"/>
 		<div>
 			<h3>${person.name}</h3>
 			<h4>${person.subtitle}</h4>
@@ -54,7 +68,7 @@ if (window.location.hash) {
 	// State initilization
 	const stateListeners = {
 		'scrollLock': function () { toggleScroll() },
-		'autoplay': function () { console.log('Toggle Autoplay', State.autoplay) }
+		'autoplay': function () { startMessageRotation() }
 	}
 
 	const keys = Object.keys(stateListeners)
@@ -64,7 +78,11 @@ if (window.location.hash) {
 })()
 
 function toggleScroll() {
-	document.body.classList.toggle('no-scroll')
+	if (State.scrollLock) {
+		document.body.classList.add('no-scroll')
+	} else {
+		document.body.classList.remove('no-scroll')
+	}
 }
 
 // Event Listeners
@@ -97,17 +115,14 @@ function startPodcast() {
 	// Keep track of what the currentMessage is in my state manager. (a global variable that serves as a session cache).
 	State.addNew('currentMessage', 0)
 	State.addNew('previousTalking', '')
-	State.started = true
 	State.autoplay = true
-
-	startMessageRotation()
 }
 
 function scrollToBottom(id) {
-	document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'end'})
+	document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'end' })
 }
 
-function messageTemplate(message) {
+function addMessage(message) {
 	const who = State.hosts.find(host => host.name === message.talking)
 
 	const div = document.createElement('div')
@@ -135,46 +150,56 @@ function messageTemplate(message) {
 function pushMessage(message) {
 	const transcript = document.getElementById('transcript')
 
-	if (message.pause) {
-		transcript.insertAdjacentHTML('beforeend', `<div class="pause"></div>`)
-	} else {
-		transcript.insertAdjacentElement('beforeend', messageTemplate(message))
+	switch(message.type) {
+		case 'message':
+			transcript.insertAdjacentElement('beforeend', addMessage(message))
+		break;
+		case 'image':
+			transcript.insertAdjacentHTML('beforeEnd', `<img src="${message.image}" §/>`)
+		break;
+		case 'pause':
+			transcript.insertAdjacentHTML('beforeend', `<div class="pause"><div style="animation-duration: ${message.length}ms" class="loadbar"></div><p>${message.message ? message.message : 'ff pauze.' }</p></div>`)
+		break;
+		default:
+			console.error('Message type not found!')
 	}
+
 	State.previousTalking = message.talking
 	return scrollToBottom('transcript')
+}
+
+function getMessageDelay(message, multiplier) {
+	let speed
+
+	if (message.type === "pause" || message.type === "image") { // If this message is a pause block, then timeout the rotation for this amount of time.
+		speed = message.length / State.wordSpeed
+	} else {
+		speed = message.message.split(' ').length
+	}
+
+	console.log('wordCount:' + speed, 'Delay:' + speed * State.wordSpeed * multiplier, message)
+	return speed * State.wordSpeed * multiplier
 }
 
 function startMessageRotation() {
 	if (State.currentMessage < State.transcript.length && State.autoplay) { // Check if there are still messages, and autoplay is on.
 		const thisMessage = State.transcript[State.currentMessage]
-		let wordCount
+		const nextMessage = State.transcript[State.currentMessage + 1]
+		let multiplier = 1
 
-		if (thisMessage.pause) { // If this message is a pause block, then timeout the rotation for this amount of time.
-			wordCount = thisMessage.pause / State.wordSpeed
-		} else {
-			wordCount = thisMessage.message.split(' ').length
+		if (nextMessage && thisMessage.talking && nextMessage.talking && thisMessage.talking !== nextMessage.talking) {
+			console.log('Added multiplier of 1.5 to next message')
+			multiplier = 1.5
 		}
 
 		pushMessage(thisMessage)
-		console.log('wordCount:' + wordCount, thisMessage)
-
 		State.currentMessage++ // Add up one to currentMessage
+
 		setTimeout(() => {
 			startMessageRotation()
-		}, wordCount * State.wordSpeed);
+		}, getMessageDelay(thisMessage, multiplier));
+	} else {
+		// If can't autoplay don't scroll lock.
+		State.scrollLock = false
 	}
 }
-
-// function handleSpacebar() {
-// 	// Toggle autoplay
-// 	if (State.autoplay) {
-// 		State.autoplay = false
-// 	} else {
-// 		State.autoplay = true
-// 		setTimeout(() => {
-// 			startMessageRotation()
-// 		}, 500);
-// 	}
-
-// 	// toggleScroll()
-// }

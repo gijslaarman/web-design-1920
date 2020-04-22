@@ -12,55 +12,70 @@
             "color": "#103747",
             "subtitle": "Presentator",
             "role": "host",
-            "img": "https://via.placeholder.com/300x400"
+            "img": "https://pbs.twimg.com/profile_images/1249456049893105665/Te2bredB_400x400.jpg"
         },
         {
             "name": "Rutger Bregman",
             "color": "#F76DB7",
             "subtitle": "Journalist bij de Correspondent & auteur",
             "role": "guest",
-            "img": "https://via.placeholder.com/200x500"
+            "img": "https://storage.pubble.nl/9ed0159c/content/lio/img-p02beeldaanrader-rutgerbregman6-1-creditstomaartjeterhorst.jpg"
         }
 
     ],
     "transcript": [
         {
+            "type": "image",
+            "image": "/img/intro.gif",
+            "length": 4000
+        },
+        {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "Ja hallo, en welkom bij de Boos Anti Corona Depressie Podcast."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "Waar we elke dinsdag en donderdag in deze vreemde tijden gedomineerd door het Corona virus, jou niet boos maar blij 😁 proberen te maken."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "Door wat prettigs in jouw hoofd te stoppen. Voor een beetje hoop, en een beetje toekomst."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "Je voelt je in ieder geval beter na de podcast dan vooraf."
         },
         {
-            "talking": null,
-            "pause": 2000
+            "type": "pause",
+            "length": 2000,
+            "message": "ff pauze."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "Vandaag gaan we het hebben over: Hoe een crisis juist het beste uit een mens kan halen."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "En hoe wij hier als maatschappij beter uit de crisis kunnen komen."
         },
         {
+            "type": "message",
             "talking": "Tim Hofman",
             "message": "En dat doen wij vandaag met behulp van Rutger Bregman!"
         },
         {
+            "type": "message",
             "talking": "Rutger Bregman",
             "message": "Hi Tim leuk dat ik erbij mag zijn vandaag! Ben echt benieuwd!"
         },
         {
+            "type": "message",
             "talking": "Rutger Bregman",
             "message": "Template"
         }

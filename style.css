@@ -19,6 +19,8 @@ html, body {
 body {
     background: #043853;
     position: relative;
+    max-width: 45em;
+    margin: 0 auto;
 }
 
 body.no-scroll {
@@ -132,6 +134,7 @@ li {
 }
 
 .persons img {
+    border: 2px solid;
     width: 4em;
     height: 4em;
     object-fit: cover;
@@ -162,7 +165,28 @@ li {
 }
 
 #transcript .pause {
-    height: 2em;
+    padding: .25em;
+    margin: 1em 0;
+    position: relative;
+}
+
+#transcript .loadbar {
+    background-color: var(--pink);
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    animation: load forwards linear;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+#transcript .pause p {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    color: white;
 }
 
 #transcript .string {
@@ -187,12 +211,43 @@ li {
     bottom: 0;
     height: 5em;
     width: 100%;
+    padding: 0.25em .5em;
+    display: flex;
+    align-items: center;
     background-color: white;
     left: 0;
     right: 0;
     transform: translateY(0);
     transition: transform 500ms;
     box-shadow: 0 -4px 14px #21212120;
+}
+
+#controls [autoplay_control] {
+    font-size: 16px;
+    position: relative;
+    width: 4em;
+    height: 4em;
+    box-shadow: var(--shadow);
+}
+
+#controls [autoplay_control] svg {
+    position: absolute;
+    fill: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 2em;
+    height: 2em;
+}
+
+#controls [autoplay_control][state=play] #pause {
+    display: block;
+}
+
+#controls [autoplay_control][state=paused] #play {
+    display: block;
+    left: 55%;
 }
 
 #controls.hidden {
@@ -206,5 +261,15 @@ li {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes load {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
     }
 }
