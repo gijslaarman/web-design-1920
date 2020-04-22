@@ -1,5 +1,6 @@
 import StateManager from "./js/StateManager.js"
 const controlPanel = document.getElementById('controls')
+var images = []
 
 controlPanel.querySelector('[autoplay_control]').addEventListener('click', function () {
 	// Toggle play
@@ -48,6 +49,19 @@ fetch(window.location.href + '/podcast.json').then(res => res.json())
 
 		State.hosts = podcast.hosts
 		State.transcript = podcast.transcript
+
+		// After all the data is fetched and filled in, start preloading the images of the podcast.
+		podcast.transcript.forEach(block => {
+			if (block.type === 'image') {
+				// pre load image in state array
+				const image = new Image()
+				image.src = block.imageSrc
+
+				images.push(image)
+			}
+		})
+
+		console.log(images)
 	})
 
 var start = document.querySelector('button')
@@ -155,7 +169,7 @@ function pushMessage(message) {
 			transcript.insertAdjacentElement('beforeend', addMessage(message))
 		break;
 		case 'image':
-			transcript.insertAdjacentHTML('beforeEnd', `<img src="${message.image}" §/>`)
+			transcript.insertAdjacentHTML('beforeEnd', `<img src="${message.imageSrc}" §/>`)
 		break;
 		case 'pause':
 			transcript.insertAdjacentHTML('beforeend', `<div class="pause"><div style="animation-duration: ${message.length}ms" class="loadbar"></div><p>${message.message ? message.message : 'ff pauze.' }</p></div>`)

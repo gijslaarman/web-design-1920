@@ -26,7 +26,8 @@
     "transcript": [
         {
             "type": "image",
-            "image": "./img/intro.gif",
+            "imageSrc": "./img/intro.gif",
+            "imageName": "intro",
             "length": 4000
         },
         {
