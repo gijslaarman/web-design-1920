@@ -77,8 +77,58 @@
         },
         {
             "type": "message",
+            "talking": "Tim Hofman",
+            "message": "Nee jij bedankt dat je er bij bent!"
+        },
+        {
+            "type": "message",
+            "talking": "Tim Hofman",
+            "message": "Voor de mensen die niet weten wie Rutger is. Rutger is een journalist voor 'de Correspondent' met interesse in psychologie."
+        },
+        {
+            "type": "message",
+            "talking": "Tim Hofman",
+            "message": "Dus Rutger, vertel jij hebt laatst een boek geschreven: 'De Meeste Mensen Deugen'."
+        },
+        {
+            "type": "image",
+            "imageSrc": "https://d3dmn0qacml2g.cloudfront.net/w_500,h_500/s3-dwdd-bnnvara/d2393819-146c-4204-b73d-a877e8cdbc58.jpg",
+            "length": 1000
+        },
+        {
+            "type": "messasge",
+            "talking": "Tim Hofman",
+            "message": "Super goed boek, echt lezen mensen."
+        },
+        {
+            "type": "message",
             "talking": "Rutger Bregman",
-            "message": "Template"
+            "message": "Haha, dankje! Ben er zelf ook trots op."
+        },
+        {
+            "type": "message",
+            "talking": "Rutger Bregman",
+            "message": "Het boek begon bij een paar kleinere artikelen die ik had geschreven voor de Correspondent."
+        },
+        {
+            "type": "message",
+            "talking": "Rutger Bregman",
+            "message": "Uiteindelijk is dat uitgegroeid tot een heus boek. Het is zeker niet perfect maar ik heb wel mijn uiterste best gedaan!"
+        },
+        {
+            "type": "message",
+            "talking":"Tim Hofman",
+            "message": "Ik vind het een mooi boek!"
+        },
+        {
+            "type": "message",
+            "talking": "Tim Hofman",
+            "message": "Maar goed daar heb ik je niet voor uitgenodigd. Rutger wat vind jij van de huidige crisis?"
+        },
+        {
+            "type": "message",
+            "talking": "Rutger Bregman",
+            "message": "Ja, super vervelend.. Maar ik was al een redelijk binnen mens. Voor mij is dit niet het einde van de wereld 😜."
         }
     ]
 }

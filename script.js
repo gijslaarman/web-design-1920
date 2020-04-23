@@ -22,7 +22,7 @@ const State = new StateManager({
 	transcript: [],
 	started: false,
 	hosts: [],
-	wordSpeed: 150
+	wordSpeed: 200
 })
 
 function createPerson(person) {
@@ -169,7 +169,7 @@ function pushMessage(message) {
 			transcript.insertAdjacentElement('beforeend', addMessage(message))
 		break;
 		case 'image':
-			transcript.insertAdjacentHTML('beforeEnd', `<img src="${message.imageSrc}" §/>`)
+			transcript.insertAdjacentHTML('beforeEnd', `<div class="margin-top"><img src="${message.imageSrc}" /></div>`)
 		break;
 		case 'pause':
 			transcript.insertAdjacentHTML('beforeend', `<div class="pause"><div style="animation-duration: ${message.length}ms" class="loadbar"></div><p>${message.message ? message.message : 'ff pauze.' }</p></div>`)

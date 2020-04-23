@@ -164,6 +164,11 @@ li {
     margin-top: .5em;
 }
 
+#transcript img {
+    max-height: 24em;    
+    object-fit: contain;
+}
+
 #transcript .pause {
     padding: .25em;
     margin: 1em 0;
