@@ -31,6 +31,11 @@
             "length": 4000
         },
         {
+            "type": "pause",
+            "length": 1000,
+            "message": "Even vooraf"  
+        },
+        {
             "type": "message",
             "talking": "Tim Hofman",
             "message": "Ja hallo, en welkom bij de Boos Anti Corona Depressie Podcast."
@@ -53,7 +58,7 @@
         {
             "type": "pause",
             "length": 2000,
-            "message": "ff pauze."
+            "message": "Laten we beginnen."
         },
         {
             "type": "message",
@@ -83,17 +88,28 @@
         {
             "type": "message",
             "talking": "Tim Hofman",
-            "message": "Voor de mensen die niet weten wie Rutger is. Rutger is een journalist voor 'de Correspondent' met interesse in psychologie."
+            "message": "Voor de mensen die niet weten wie Rutger is. Rutger is een journalist voor.."
+        },
+        {
+            "type": "image",
+            "imageSrc": "./img/correspondent.gif",
+            "imageName": "correspondent logo",
+            "length": 6000
+        },
+        {
+            "type": "message",
+            "talking": "Tim Hofman",
+            "message": "Cool filmpje he!"
+        },
+        {
+            "type": "pause",
+            "text": "",
+            "length": 500
         },
         {
             "type": "message",
             "talking": "Tim Hofman",
             "message": "Dus Rutger, vertel jij hebt laatst een boek geschreven: 'De Meeste Mensen Deugen'."
-        },
-        {
-            "type": "image",
-            "imageSrc": "https://d3dmn0qacml2g.cloudfront.net/w_500,h_500/s3-dwdd-bnnvara/d2393819-146c-4204-b73d-a877e8cdbc58.jpg",
-            "length": 1000
         },
         {
             "type": "message",

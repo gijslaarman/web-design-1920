@@ -13,17 +13,21 @@ import State from "./State.js"
 // 	}
 // })
 
-controlPanel.querySelector('[autoplay_control]').addEventListener('click', function () {
-	// Toggle play
-	const buttonState = this.getAttribute('state')
+var controlPanel = (function(){
+	const controlPanel = document.getElementById('controls')
+	
+	controlPanel.querySelector('[autoplay_control]').addEventListener('click', function () {
+		// Toggle play
+		const buttonState = this.getAttribute('state')
+		console.log('toggle pause')
+		if (buttonState == 'play') {
+			this.setAttribute('state', 'paused')
+			State.autoplay = false
+		} else {
+			this.setAttribute('state', 'play')
+			State.autoplay = true
+		}
+	})
+})()
 
-	if (buttonState == 'play') {
-		this.setAttribute('state', 'paused')
-		State.autoplay = false
-	} else {
-		this.setAttribute('state', 'play')
-		State.autoplay = true
-	}
-})
-
-const controlPanel = document.getElementById('controls')
+export default controlPanel

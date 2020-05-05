@@ -2,6 +2,7 @@ import State from "./State.js"
 import { images } from "../script.js"
 import scrollManager from "./scrollManager.js"
 import transcriptManager from "./transcriptManager.js"
+import controlPanel from "./controlPanel.js"
 
 function createPerson(person) {
     return `

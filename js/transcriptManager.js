@@ -89,11 +89,11 @@ transcriptManager.startPodcast = function() {
 	State.scrollLock = true
 	// Expand transcript div, Scroll to the transcript part
 	document.getElementById('transcript').classList.add('started')
+	document.getElementById('controls').classList.remove('hidden')
 	document.getElementById(this.getAttribute('link')).scrollIntoView({
 		behavior: 'smooth'
 	})
 
-	document.getElementById('controls').classList.remove('hidden')
 
 	// Tell the browser to start transforming the transcript into messages, after each other.
 	// Keep track of what the currentMessage is in my state manager. (a global variable that serves as a session cache).

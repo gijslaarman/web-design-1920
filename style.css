@@ -165,8 +165,8 @@ li {
 }
 
 #transcript img {
-    max-height: 24em;    
-    object-fit: contain;
+    height: 12em;
+    object-fit: cover;
 }
 
 #transcript .pause {
