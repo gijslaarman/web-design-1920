@@ -18,6 +18,8 @@ Marie van Driessche is Deaf. With a capital D, that means sign language is her n
 ### Proces
 How'd go? Check it my [weekly logs](https://github.com/gijslaarman/web-design-1920/wiki).
 
+### Room for nonsense
+Why so serious? Adding a little smiley/emoji here and there, or inserting a funny image/gif in the transcript lightens up the mood a bit :). Give the user a break with a pause moment with your funny text inside. In short: The podcast doesn't need to be only just text, the visuals make it fun and way more playful whilst stupidly hilarious sometimes! (Look I know in the current demo there's no funny gif, but imagine there would be one).
 
 ## Demo
 ![Two screenshots of the working demo. On the left side: First view, small summary to see if the podcast is worth your time. On the right side: Podcast in action but paused.](docs/img/screenshots.jpg)
@@ -34,6 +36,8 @@ git clone https://github.com/gijslaarman/web-design-1920.git && cd web-design-19
 ```
 
 That's all. This is build in vanilla js.
+
+---
 
 ### Creating your own transcript
 All the data is super easy to adjust. An example is in the [podcast.json](https://github.com/gijslaarman/web-design-1920/blob/master/podcast.json).
