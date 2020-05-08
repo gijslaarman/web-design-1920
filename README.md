@@ -39,10 +39,20 @@ That's all. This is build in vanilla js.
 
 ---
 
-### Creating your own transcript
-All the data is super easy to adjust. An example is in the [podcast.json](https://github.com/gijslaarman/web-design-1920/blob/master/podcast.json).
+## Creating your own transcript
+I've created a little javascript engine that loads up the JSON file and renders it into a podcast. You can easily create your own. The engine will take in consideration:
 
-Edit it to your liking and the engine will take care of the rest ;). Just put the blocks in chronological order.
+- The amount of words there are and how long it needs to wait for the next message to show based on a variable. The standard is 200ms per word (WIP: but in the control panel you can adjust the wordspeed by a 50ms interval, based on users preference).
+- Pause the podcast at any time if you wanna re-read a section again.
+- Choose between 3 different type of blocks you can use:
+    - A message
+    - A pause
+    - An image/gif.
+- Easily add hosts to your podcast.
+
+Take a look at the example. All the data is super easy to adjust, and I'm sure you understand it directly. An example is in the [podcast.json](https://github.com/gijslaarman/web-design-1920/blob/master/podcast.json).
+
+Edit it to your liking and the engine will take care of the rest ;). Disclaimer: Put the blocks in chronological order (top to bottom).
 
 Current working blocks:
 ```json
